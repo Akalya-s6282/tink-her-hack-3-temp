@@ -35,16 +35,8 @@ pythhon main.py
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[See it's working!!!](https://drive.google.com/file/d/1m60g-31pZUkrXCwuxPF5Jd-EU4scONSD/view?usp=drivesdk)
 
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
 
 ---
 Made with ❤️ at TinkerHub
