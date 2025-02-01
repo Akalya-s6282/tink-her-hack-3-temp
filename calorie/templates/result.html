@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Estimation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Estimation Result</h1>
+
+        {% if food_items %}
+            <div class="result-box">
+                <h3>Consumed Calories:</h3>
+                <ul>
+                    {% for item in food_items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <h3>Total Calories Consumed: <span style="color: #007bff;">{{ total_calories }} kcal</span></h3>
+            </div>
+        {% else %}
+            <p>No food items entered.</p>
+        {% endif %}
+
+        <hr>
+        
+        {% if remaining_calories > 0 %}
+            <h2>You need <span style="color: #dc3545;">{{ remaining_calories }} kcal</span> more to meet your goal</h2>
+            <div class="result-box">
+                <h3>Suggested Additional Intake:</h3>
+                <ul class="suggestions">
+                    {% for suggestion in suggestions %}
+                        <li>{{ suggestion }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <h2 style="color: green;">🎉 You have met or exceeded your daily calorie goal!</h2>
+        {% endif %}
+
+        <br>
+        <a href="/"><button>Enter More Foods</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Estimator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function addFoodInput() {
+            let container = document.getElementById("food-inputs");
+            let div = document.createElement("div");
+            div.innerHTML = `
+                <input type="text" name="food" placeholder="Enter food item" required>
+                <input type="number" name="quantity" placeholder="Quantity (e.g. 1, 2.5)" step="1" required>
+                <button type="button" onclick="removeInput(this)">❌</button>
+            `;
+            container.appendChild(div);
+        }
+
+        function removeInput(button) {
+            button.parentElement.remove();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Estimator</h1>
+        <form method="post">
+            <div id="food-inputs">
+                <input type="text" name="food" placeholder="Enter food item" required>
+                <input type="number" name="quantity" placeholder="Quantity (e.g. 1, 2.5)" step="1" required>
+            </div>
+            <button type="button" onclick="addFoodInput()">➕ Add More</button>
+            <br><br>
+            <button type="submit">Calculate Calories</button>
+        </form>
+    </div>
+</body>
+</html>
