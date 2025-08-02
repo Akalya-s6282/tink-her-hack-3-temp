@@ -35,7 +35,7 @@ pythhon main.py
 
 ### Project Demo
 # Video
-[See it's working!!!](https://drive.google.com/file/d/1m60g-31pZUkrXCwuxPF5Jd-EU4scONSD/view?usp=drivesdk)
+![See it's working!!!](https://drive.google.com/file/d/1m60g-31pZUkrXCwuxPF5Jd-EU4scONSD/view?usp=drivesdk)
 
 
 ---
